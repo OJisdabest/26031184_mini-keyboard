@@ -44,7 +44,11 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.panel_notepad = new System.Windows.Forms.Panel();
             this.txt_Notepad = new System.Windows.Forms.TextBox();
+            this.panel_wordbuilder = new System.Windows.Forms.Panel();
+            this.txt_WordBuilder = new System.Windows.Forms.RichTextBox();
+            this.txt_Mode_Status = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
+            this.panel_wordbuilder.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -156,12 +160,41 @@
             this.txt_Notepad.Size = new System.Drawing.Size(806, 298);
             this.txt_Notepad.TabIndex = 4;
             // 
+            // panel_wordbuilder
+            // 
+            this.panel_wordbuilder.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel_wordbuilder.Controls.Add(this.txt_Mode_Status);
+            this.panel_wordbuilder.Controls.Add(this.txt_WordBuilder);
+            this.panel_wordbuilder.Location = new System.Drawing.Point(278, 352);
+            this.panel_wordbuilder.Name = "panel_wordbuilder";
+            this.panel_wordbuilder.Size = new System.Drawing.Size(265, 41);
+            this.panel_wordbuilder.TabIndex = 6;
+            // 
+            // txt_WordBuilder
+            // 
+            this.txt_WordBuilder.Location = new System.Drawing.Point(3, 6);
+            this.txt_WordBuilder.Name = "txt_WordBuilder";
+            this.txt_WordBuilder.Size = new System.Drawing.Size(192, 28);
+            this.txt_WordBuilder.TabIndex = 3;
+            this.txt_WordBuilder.Text = "";
+            // 
+            // txt_Mode_Status
+            // 
+            this.txt_Mode_Status.BackColor = System.Drawing.Color.White;
+            this.txt_Mode_Status.Location = new System.Drawing.Point(197, 10);
+            this.txt_Mode_Status.Name = "txt_Mode_Status";
+            this.txt_Mode_Status.ReadOnly = true;
+            this.txt_Mode_Status.Size = new System.Drawing.Size(61, 20);
+            this.txt_Mode_Status.TabIndex = 4;
+            this.txt_Mode_Status.Text = "Multi-Press";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(836, 675);
+            this.Controls.Add(this.panel_wordbuilder);
             this.Controls.Add(this.txt_Notepad);
             this.Controls.Add(this.panel_notepad);
             this.Controls.Add(this.menuStrip1);
@@ -171,6 +204,8 @@
             this.Text = "Mini Keyboard v1.0";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel_wordbuilder.ResumeLayout(false);
+            this.panel_wordbuilder.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,6 +229,9 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Panel panel_notepad;
         private System.Windows.Forms.TextBox txt_Notepad;
+        private System.Windows.Forms.Panel panel_wordbuilder;
+        private System.Windows.Forms.TextBox txt_Mode_Status;
+        private System.Windows.Forms.RichTextBox txt_WordBuilder;
     }
 }
 
