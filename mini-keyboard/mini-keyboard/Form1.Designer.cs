@@ -55,6 +55,18 @@
             this.btn_NotUsed2 = new System.Windows.Forms.Button();
             this.btn_NotUsed1 = new System.Windows.Forms.Button();
             this.btn_Send_Predicted = new System.Windows.Forms.Button();
+            this.btn_Zero = new System.Windows.Forms.Button();
+            this.btn_Space = new System.Windows.Forms.Button();
+            this.btn_Symbols = new System.Windows.Forms.Button();
+            this.btn_Three = new System.Windows.Forms.Button();
+            this.btn_Two = new System.Windows.Forms.Button();
+            this.btn_One = new System.Windows.Forms.Button();
+            this.btn_Six = new System.Windows.Forms.Button();
+            this.btn_Five = new System.Windows.Forms.Button();
+            this.btn_Four = new System.Windows.Forms.Button();
+            this.btn_Nine = new System.Windows.Forms.Button();
+            this.btn_Eight = new System.Windows.Forms.Button();
+            this.btn_Seven = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel_wordbuilder.SuspendLayout();
             this.panel_buttons.SuspendLayout();
@@ -200,6 +212,18 @@
             // panel_buttons
             // 
             this.panel_buttons.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel_buttons.Controls.Add(this.btn_Zero);
+            this.panel_buttons.Controls.Add(this.btn_Space);
+            this.panel_buttons.Controls.Add(this.btn_Symbols);
+            this.panel_buttons.Controls.Add(this.btn_Three);
+            this.panel_buttons.Controls.Add(this.btn_Two);
+            this.panel_buttons.Controls.Add(this.btn_One);
+            this.panel_buttons.Controls.Add(this.btn_Six);
+            this.panel_buttons.Controls.Add(this.btn_Five);
+            this.panel_buttons.Controls.Add(this.btn_Four);
+            this.panel_buttons.Controls.Add(this.btn_Nine);
+            this.panel_buttons.Controls.Add(this.btn_Eight);
+            this.panel_buttons.Controls.Add(this.btn_Seven);
             this.panel_buttons.Controls.Add(this.btn_Enter);
             this.panel_buttons.Controls.Add(this.btn_NotUsed2);
             this.panel_buttons.Controls.Add(this.btn_NotUsed1);
@@ -280,6 +304,127 @@
             this.btn_Send_Predicted.Text = "Show\r\nPred-\r\niction";
             this.btn_Send_Predicted.UseVisualStyleBackColor = false;
             // 
+            // btn_Zero
+            // 
+            this.btn_Zero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_Zero.Location = new System.Drawing.Point(137, 207);
+            this.btn_Zero.Name = "btn_Zero";
+            this.btn_Zero.Size = new System.Drawing.Size(58, 50);
+            this.btn_Zero.TabIndex = 36;
+            this.btn_Zero.Text = "#\r\n000";
+            this.btn_Zero.UseVisualStyleBackColor = false;
+            // 
+            // btn_Space
+            // 
+            this.btn_Space.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btn_Space.Location = new System.Drawing.Point(73, 207);
+            this.btn_Space.Name = "btn_Space";
+            this.btn_Space.Size = new System.Drawing.Size(58, 50);
+            this.btn_Space.TabIndex = 35;
+            this.btn_Space.Text = "000\r\n[ _ }";
+            this.btn_Space.UseVisualStyleBackColor = false;
+            // 
+            // btn_Symbols
+            // 
+            this.btn_Symbols.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_Symbols.Location = new System.Drawing.Point(9, 207);
+            this.btn_Symbols.Name = "btn_Symbols";
+            this.btn_Symbols.Size = new System.Drawing.Size(58, 50);
+            this.btn_Symbols.TabIndex = 34;
+            this.btn_Symbols.Text = "* - _";
+            this.btn_Symbols.UseVisualStyleBackColor = false;
+            // 
+            // btn_Three
+            // 
+            this.btn_Three.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_Three.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F);
+            this.btn_Three.Location = new System.Drawing.Point(137, 156);
+            this.btn_Three.Name = "btn_Three";
+            this.btn_Three.Size = new System.Drawing.Size(58, 50);
+            this.btn_Three.TabIndex = 33;
+            this.btn_Three.Text = "3\r\nW X Y Z";
+            this.btn_Three.UseVisualStyleBackColor = false;
+            // 
+            // btn_Two
+            // 
+            this.btn_Two.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_Two.Location = new System.Drawing.Point(73, 156);
+            this.btn_Two.Name = "btn_Two";
+            this.btn_Two.Size = new System.Drawing.Size(58, 50);
+            this.btn_Two.TabIndex = 32;
+            this.btn_Two.Text = "2\r\nT U V";
+            this.btn_Two.UseVisualStyleBackColor = false;
+            // 
+            // btn_One
+            // 
+            this.btn_One.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_One.Location = new System.Drawing.Point(9, 156);
+            this.btn_One.Name = "btn_One";
+            this.btn_One.Size = new System.Drawing.Size(58, 50);
+            this.btn_One.TabIndex = 31;
+            this.btn_One.Text = "1\r\nP Q R S";
+            this.btn_One.UseVisualStyleBackColor = false;
+            // 
+            // btn_Six
+            // 
+            this.btn_Six.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_Six.Location = new System.Drawing.Point(137, 105);
+            this.btn_Six.Name = "btn_Six";
+            this.btn_Six.Size = new System.Drawing.Size(58, 50);
+            this.btn_Six.TabIndex = 30;
+            this.btn_Six.Text = "6\r\nM N O";
+            this.btn_Six.UseVisualStyleBackColor = false;
+            // 
+            // btn_Five
+            // 
+            this.btn_Five.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_Five.Location = new System.Drawing.Point(73, 105);
+            this.btn_Five.Name = "btn_Five";
+            this.btn_Five.Size = new System.Drawing.Size(58, 50);
+            this.btn_Five.TabIndex = 29;
+            this.btn_Five.Text = "5\r\nJ K L";
+            this.btn_Five.UseVisualStyleBackColor = false;
+            // 
+            // btn_Four
+            // 
+            this.btn_Four.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_Four.Location = new System.Drawing.Point(9, 105);
+            this.btn_Four.Name = "btn_Four";
+            this.btn_Four.Size = new System.Drawing.Size(58, 50);
+            this.btn_Four.TabIndex = 28;
+            this.btn_Four.Text = "4\r\nG H I";
+            this.btn_Four.UseVisualStyleBackColor = false;
+            // 
+            // btn_Nine
+            // 
+            this.btn_Nine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_Nine.Location = new System.Drawing.Point(137, 54);
+            this.btn_Nine.Name = "btn_Nine";
+            this.btn_Nine.Size = new System.Drawing.Size(58, 50);
+            this.btn_Nine.TabIndex = 27;
+            this.btn_Nine.Text = "9\r\nD E F";
+            this.btn_Nine.UseVisualStyleBackColor = false;
+            // 
+            // btn_Eight
+            // 
+            this.btn_Eight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_Eight.Location = new System.Drawing.Point(73, 54);
+            this.btn_Eight.Name = "btn_Eight";
+            this.btn_Eight.Size = new System.Drawing.Size(58, 50);
+            this.btn_Eight.TabIndex = 26;
+            this.btn_Eight.Text = "8\r\nA B C";
+            this.btn_Eight.UseVisualStyleBackColor = false;
+            // 
+            // btn_Seven
+            // 
+            this.btn_Seven.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btn_Seven.Location = new System.Drawing.Point(9, 54);
+            this.btn_Seven.Name = "btn_Seven";
+            this.btn_Seven.Size = new System.Drawing.Size(58, 50);
+            this.btn_Seven.TabIndex = 25;
+            this.btn_Seven.Text = "7\r\n. , \"\r\n";
+            this.btn_Seven.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -334,6 +479,18 @@
         private System.Windows.Forms.Button btn_NotUsed2;
         private System.Windows.Forms.Button btn_NotUsed1;
         private System.Windows.Forms.Button btn_Send_Predicted;
+        private System.Windows.Forms.Button btn_Zero;
+        private System.Windows.Forms.Button btn_Space;
+        private System.Windows.Forms.Button btn_Symbols;
+        private System.Windows.Forms.Button btn_Three;
+        private System.Windows.Forms.Button btn_Two;
+        private System.Windows.Forms.Button btn_One;
+        private System.Windows.Forms.Button btn_Six;
+        private System.Windows.Forms.Button btn_Five;
+        private System.Windows.Forms.Button btn_Four;
+        private System.Windows.Forms.Button btn_Nine;
+        private System.Windows.Forms.Button btn_Eight;
+        private System.Windows.Forms.Button btn_Seven;
     }
 }
 
