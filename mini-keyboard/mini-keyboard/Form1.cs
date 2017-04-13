@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO; //used for stream writer and reader
+using MyDialogs; //add file which contains class for inputbox
 
 namespace mini_keyboard
 {
@@ -20,7 +22,7 @@ namespace mini_keyboard
         private void btn_Mode_Click(object sender, EventArgs e)
         {
             state = !state; //toggle state
-
+            
             if (state == true)
             {
                 txt_Mode_Status.Text = "Prediction"; //set mode status text to "Prediction" if state is true
@@ -28,7 +30,7 @@ namespace mini_keyboard
             else
             {
                 txt_Mode_Status.Text = "Multi-Press"; //set mode status text to "Multi-Press" if state is false
-            }            
+            }
         }
     }
 }
