@@ -47,8 +47,13 @@
             this.panel_wordbuilder = new System.Windows.Forms.Panel();
             this.txt_WordBuilder = new System.Windows.Forms.RichTextBox();
             this.txt_Mode_Status = new System.Windows.Forms.TextBox();
+            this.panel_buttons = new System.Windows.Forms.Panel();
+            this.btn_Previous = new System.Windows.Forms.Button();
+            this.btn_Next = new System.Windows.Forms.Button();
+            this.btn_Mode = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel_wordbuilder.SuspendLayout();
+            this.panel_buttons.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -188,12 +193,54 @@
             this.txt_Mode_Status.TabIndex = 4;
             this.txt_Mode_Status.Text = "Multi-Press";
             // 
+            // panel_buttons
+            // 
+            this.panel_buttons.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel_buttons.Controls.Add(this.btn_Previous);
+            this.panel_buttons.Controls.Add(this.btn_Next);
+            this.panel_buttons.Controls.Add(this.btn_Mode);
+            this.panel_buttons.Location = new System.Drawing.Point(278, 394);
+            this.panel_buttons.Name = "panel_buttons";
+            this.panel_buttons.Size = new System.Drawing.Size(265, 269);
+            this.panel_buttons.TabIndex = 7;
+            // 
+            // btn_Previous
+            // 
+            this.btn_Previous.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_Previous.Location = new System.Drawing.Point(137, 3);
+            this.btn_Previous.Name = "btn_Previous";
+            this.btn_Previous.Size = new System.Drawing.Size(58, 50);
+            this.btn_Previous.TabIndex = 7;
+            this.btn_Previous.Text = "Prev-\r\nious";
+            this.btn_Previous.UseVisualStyleBackColor = false;
+            // 
+            // btn_Next
+            // 
+            this.btn_Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_Next.Location = new System.Drawing.Point(73, 3);
+            this.btn_Next.Name = "btn_Next";
+            this.btn_Next.Size = new System.Drawing.Size(58, 50);
+            this.btn_Next.TabIndex = 6;
+            this.btn_Next.Text = "Next";
+            this.btn_Next.UseVisualStyleBackColor = false;
+            // 
+            // btn_Mode
+            // 
+            this.btn_Mode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_Mode.Location = new System.Drawing.Point(9, 3);
+            this.btn_Mode.Name = "btn_Mode";
+            this.btn_Mode.Size = new System.Drawing.Size(58, 50);
+            this.btn_Mode.TabIndex = 5;
+            this.btn_Mode.Text = "Mode";
+            this.btn_Mode.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(836, 675);
+            this.Controls.Add(this.panel_buttons);
             this.Controls.Add(this.panel_wordbuilder);
             this.Controls.Add(this.txt_Notepad);
             this.Controls.Add(this.panel_notepad);
@@ -206,6 +253,7 @@
             this.menuStrip1.PerformLayout();
             this.panel_wordbuilder.ResumeLayout(false);
             this.panel_wordbuilder.PerformLayout();
+            this.panel_buttons.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,6 +280,10 @@
         private System.Windows.Forms.Panel panel_wordbuilder;
         private System.Windows.Forms.TextBox txt_Mode_Status;
         private System.Windows.Forms.RichTextBox txt_WordBuilder;
+        private System.Windows.Forms.Panel panel_buttons;
+        private System.Windows.Forms.Button btn_Previous;
+        private System.Windows.Forms.Button btn_Next;
+        private System.Windows.Forms.Button btn_Mode;
     }
 }
 
