@@ -265,6 +265,7 @@
             this.btn_Mode.TabIndex = 5;
             this.btn_Mode.Text = "Mode";
             this.btn_Mode.UseVisualStyleBackColor = false;
+            this.btn_Mode.Click += new System.EventHandler(this.btn_Mode_Click);
             // 
             // btn_Enter
             // 
