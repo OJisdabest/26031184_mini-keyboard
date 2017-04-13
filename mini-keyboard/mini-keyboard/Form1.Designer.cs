@@ -51,6 +51,10 @@
             this.btn_Previous = new System.Windows.Forms.Button();
             this.btn_Next = new System.Windows.Forms.Button();
             this.btn_Mode = new System.Windows.Forms.Button();
+            this.btn_Enter = new System.Windows.Forms.Button();
+            this.btn_NotUsed2 = new System.Windows.Forms.Button();
+            this.btn_NotUsed1 = new System.Windows.Forms.Button();
+            this.btn_Send_Predicted = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel_wordbuilder.SuspendLayout();
             this.panel_buttons.SuspendLayout();
@@ -196,6 +200,10 @@
             // panel_buttons
             // 
             this.panel_buttons.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel_buttons.Controls.Add(this.btn_Enter);
+            this.panel_buttons.Controls.Add(this.btn_NotUsed2);
+            this.panel_buttons.Controls.Add(this.btn_NotUsed1);
+            this.panel_buttons.Controls.Add(this.btn_Send_Predicted);
             this.panel_buttons.Controls.Add(this.btn_Previous);
             this.panel_buttons.Controls.Add(this.btn_Next);
             this.panel_buttons.Controls.Add(this.btn_Mode);
@@ -233,6 +241,44 @@
             this.btn_Mode.TabIndex = 5;
             this.btn_Mode.Text = "Mode";
             this.btn_Mode.UseVisualStyleBackColor = false;
+            // 
+            // btn_Enter
+            // 
+            this.btn_Enter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btn_Enter.Location = new System.Drawing.Point(201, 156);
+            this.btn_Enter.Name = "btn_Enter";
+            this.btn_Enter.Size = new System.Drawing.Size(58, 101);
+            this.btn_Enter.TabIndex = 24;
+            this.btn_Enter.Text = "Enter";
+            this.btn_Enter.UseVisualStyleBackColor = false;
+            // 
+            // btn_NotUsed2
+            // 
+            this.btn_NotUsed2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btn_NotUsed2.Location = new System.Drawing.Point(201, 105);
+            this.btn_NotUsed2.Name = "btn_NotUsed2";
+            this.btn_NotUsed2.Size = new System.Drawing.Size(58, 50);
+            this.btn_NotUsed2.TabIndex = 23;
+            this.btn_NotUsed2.UseVisualStyleBackColor = false;
+            // 
+            // btn_NotUsed1
+            // 
+            this.btn_NotUsed1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btn_NotUsed1.Location = new System.Drawing.Point(201, 54);
+            this.btn_NotUsed1.Name = "btn_NotUsed1";
+            this.btn_NotUsed1.Size = new System.Drawing.Size(58, 50);
+            this.btn_NotUsed1.TabIndex = 22;
+            this.btn_NotUsed1.UseVisualStyleBackColor = false;
+            // 
+            // btn_Send_Predicted
+            // 
+            this.btn_Send_Predicted.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btn_Send_Predicted.Location = new System.Drawing.Point(201, 3);
+            this.btn_Send_Predicted.Name = "btn_Send_Predicted";
+            this.btn_Send_Predicted.Size = new System.Drawing.Size(58, 50);
+            this.btn_Send_Predicted.TabIndex = 21;
+            this.btn_Send_Predicted.Text = "Show\r\nPred-\r\niction";
+            this.btn_Send_Predicted.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -284,6 +330,10 @@
         private System.Windows.Forms.Button btn_Previous;
         private System.Windows.Forms.Button btn_Next;
         private System.Windows.Forms.Button btn_Mode;
+        private System.Windows.Forms.Button btn_Enter;
+        private System.Windows.Forms.Button btn_NotUsed2;
+        private System.Windows.Forms.Button btn_NotUsed1;
+        private System.Windows.Forms.Button btn_Send_Predicted;
     }
 }
 
