@@ -42,6 +42,8 @@
             this.configureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.panel_notepad = new System.Windows.Forms.Panel();
+            this.txt_Notepad = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -137,12 +139,31 @@
             // 
             this.saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
             // 
+            // panel_notepad
+            // 
+            this.panel_notepad.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel_notepad.Location = new System.Drawing.Point(12, 42);
+            this.panel_notepad.Name = "panel_notepad";
+            this.panel_notepad.Size = new System.Drawing.Size(812, 304);
+            this.panel_notepad.TabIndex = 3;
+            // 
+            // txt_Notepad
+            // 
+            this.txt_Notepad.Location = new System.Drawing.Point(15, 45);
+            this.txt_Notepad.Multiline = true;
+            this.txt_Notepad.Name = "txt_Notepad";
+            this.txt_Notepad.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txt_Notepad.Size = new System.Drawing.Size(806, 298);
+            this.txt_Notepad.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(836, 675);
+            this.Controls.Add(this.txt_Notepad);
+            this.Controls.Add(this.panel_notepad);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
@@ -171,6 +192,8 @@
         private System.Windows.Forms.ToolStripMenuItem configureToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Panel panel_notepad;
+        private System.Windows.Forms.TextBox txt_Notepad;
     }
 }
 
