@@ -311,6 +311,7 @@
             this.btn_One.TabIndex = 31;
             this.btn_One.Text = "1\r\nP Q R S";
             this.btn_One.UseVisualStyleBackColor = false;
+            this.btn_One.Click += new System.EventHandler(this.btn_One_Click);
             // 
             // btn_Six
             // 
