@@ -291,6 +291,7 @@
             this.btn_Three.TabIndex = 33;
             this.btn_Three.Text = "3\r\nW X Y Z";
             this.btn_Three.UseVisualStyleBackColor = false;
+            this.btn_Three.Click += new System.EventHandler(this.btn_Three_Click);
             // 
             // btn_Two
             // 
