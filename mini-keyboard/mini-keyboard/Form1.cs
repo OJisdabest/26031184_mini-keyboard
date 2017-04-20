@@ -33,6 +33,15 @@ namespace mini_keyboard
         {
             InitializeComponent();
         }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Timer.Interval = intIntervalRequired; //initial delay between character presses
+
+            for (var intWhichButton = 0; intWhichButton <= 18; intWhichButton++)
+            {
+                boolButtonPressed[intWhichButton] = false;
+            }
+        }
         private void btn_Mode_Click(object sender, EventArgs e)
         {
             state = !state; //toggle state
