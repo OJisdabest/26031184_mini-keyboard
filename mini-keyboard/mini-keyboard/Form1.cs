@@ -74,6 +74,10 @@ namespace mini_keyboard
             strKeyStrokes = "";
             txt_WordBuilder.Clear();
         }
+        private void btn_Enter_Click(object sender, EventArgs e)
+        {
+            txt_Notepad.AppendText(Environment.NewLine);
+        }
         
     }
 }

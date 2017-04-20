@@ -381,6 +381,7 @@
             this.btn_Enter.TabIndex = 24;
             this.btn_Enter.Text = "Enter";
             this.btn_Enter.UseVisualStyleBackColor = false;
+            this.btn_Enter.Click += new System.EventHandler(this.btn_Enter_Click);
             // 
             // btn_NotUsed2
             // 
