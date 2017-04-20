@@ -301,6 +301,7 @@
             this.btn_Two.TabIndex = 32;
             this.btn_Two.Text = "2\r\nT U V";
             this.btn_Two.UseVisualStyleBackColor = false;
+            this.btn_Two.Click += new System.EventHandler(this.btn_Two_Click);
             // 
             // btn_One
             // 
