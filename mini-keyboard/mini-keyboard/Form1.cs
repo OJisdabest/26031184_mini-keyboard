@@ -42,6 +42,18 @@ namespace mini_keyboard
                 boolButtonPressed[intWhichButton] = false;
             }
         }
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            Timer.Enabled = false; //disable timer
+            boolFirstVisit = true; //reset firstVisit value
+            intMyListIndex = -1; //reset position in index
+
+            //set button states false on timer tick
+            for (var intWhichButton = 0; intWhichButton <= 18; intWhichButton++)
+            {
+                boolButtonPressed[intWhichButton] = false;
+            }
+        }
         private void btn_Mode_Click(object sender, EventArgs e)
         {
             state = !state; //toggle state
@@ -55,5 +67,6 @@ namespace mini_keyboard
                 txt_Mode_Status.Text = "Multi-Press"; //set mode status text to "Multi-Press" if state is false
             }
         }
+        
     }
 }

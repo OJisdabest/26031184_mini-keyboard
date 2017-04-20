@@ -69,6 +69,18 @@
             this.btn_Next = new System.Windows.Forms.Button();
             this.btn_Mode = new System.Windows.Forms.Button();
             this.Timer = new System.Windows.Forms.Timer(this.components);
+            this.lstb_One = new System.Windows.Forms.ListBox();
+            this.lstb_Two = new System.Windows.Forms.ListBox();
+            this.lstb_Three = new System.Windows.Forms.ListBox();
+            this.lstb_Six = new System.Windows.Forms.ListBox();
+            this.lstb_Five = new System.Windows.Forms.ListBox();
+            this.lstb_Four = new System.Windows.Forms.ListBox();
+            this.lstb_Eleven = new System.Windows.Forms.ListBox();
+            this.lstb_Ten = new System.Windows.Forms.ListBox();
+            this.lstb_Nine = new System.Windows.Forms.ListBox();
+            this.lstb_Eight = new System.Windows.Forms.ListBox();
+            this.lstb_Seven = new System.Windows.Forms.ListBox();
+            this.txt_KeySequence = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.panel_wordbuilder.SuspendLayout();
             this.panel_buttons.SuspendLayout();
@@ -428,12 +440,220 @@
             this.btn_Mode.UseVisualStyleBackColor = false;
             this.btn_Mode.Click += new System.EventHandler(this.btn_Mode_Click);
             // 
+            // Timer
+            // 
+            this.Timer.Tick += new System.EventHandler(this.Timer_Tick);
+            // 
+            // lstb_One
+            // 
+            this.lstb_One.FormattingEnabled = true;
+            this.lstb_One.Items.AddRange(new object[] {
+            "p",
+            "q",
+            "r",
+            "s",
+            "1",
+            "P",
+            "Q",
+            "R",
+            "S"});
+            this.lstb_One.Location = new System.Drawing.Point(546, 354);
+            this.lstb_One.Name = "lstb_One";
+            this.lstb_One.Size = new System.Drawing.Size(19, 121);
+            this.lstb_One.TabIndex = 8;
+            this.lstb_One.Visible = false;
+            // 
+            // lstb_Two
+            // 
+            this.lstb_Two.FormattingEnabled = true;
+            this.lstb_Two.Items.AddRange(new object[] {
+            "t",
+            "u",
+            "v",
+            "2",
+            "T",
+            "U",
+            "V"});
+            this.lstb_Two.Location = new System.Drawing.Point(571, 354);
+            this.lstb_Two.Name = "lstb_Two";
+            this.lstb_Two.Size = new System.Drawing.Size(19, 121);
+            this.lstb_Two.TabIndex = 9;
+            this.lstb_Two.Visible = false;
+            // 
+            // lstb_Three
+            // 
+            this.lstb_Three.FormattingEnabled = true;
+            this.lstb_Three.Items.AddRange(new object[] {
+            "w",
+            "x",
+            "y",
+            "z",
+            "3",
+            "W",
+            "X",
+            "Y",
+            "Z"});
+            this.lstb_Three.Location = new System.Drawing.Point(596, 354);
+            this.lstb_Three.Name = "lstb_Three";
+            this.lstb_Three.Size = new System.Drawing.Size(19, 121);
+            this.lstb_Three.TabIndex = 10;
+            this.lstb_Three.Visible = false;
+            // 
+            // lstb_Six
+            // 
+            this.lstb_Six.FormattingEnabled = true;
+            this.lstb_Six.Items.AddRange(new object[] {
+            "m",
+            "n",
+            "o",
+            "6",
+            "M",
+            "N",
+            "O"});
+            this.lstb_Six.Location = new System.Drawing.Point(671, 354);
+            this.lstb_Six.Name = "lstb_Six";
+            this.lstb_Six.Size = new System.Drawing.Size(19, 121);
+            this.lstb_Six.TabIndex = 13;
+            this.lstb_Six.Visible = false;
+            // 
+            // lstb_Five
+            // 
+            this.lstb_Five.FormattingEnabled = true;
+            this.lstb_Five.Items.AddRange(new object[] {
+            "j",
+            "k",
+            "l",
+            "5",
+            "J",
+            "K",
+            "L"});
+            this.lstb_Five.Location = new System.Drawing.Point(646, 354);
+            this.lstb_Five.Name = "lstb_Five";
+            this.lstb_Five.Size = new System.Drawing.Size(19, 121);
+            this.lstb_Five.TabIndex = 12;
+            this.lstb_Five.Visible = false;
+            // 
+            // lstb_Four
+            // 
+            this.lstb_Four.FormattingEnabled = true;
+            this.lstb_Four.Items.AddRange(new object[] {
+            "g",
+            "h",
+            "i",
+            "4",
+            "G",
+            "H",
+            "I"});
+            this.lstb_Four.Location = new System.Drawing.Point(621, 354);
+            this.lstb_Four.Name = "lstb_Four";
+            this.lstb_Four.Size = new System.Drawing.Size(19, 121);
+            this.lstb_Four.TabIndex = 11;
+            this.lstb_Four.Visible = false;
+            // 
+            // lstb_Eleven
+            // 
+            this.lstb_Eleven.FormattingEnabled = true;
+            this.lstb_Eleven.Items.AddRange(new object[] {
+            "#",
+            "-",
+            "_"});
+            this.lstb_Eleven.Location = new System.Drawing.Point(796, 354);
+            this.lstb_Eleven.Name = "lstb_Eleven";
+            this.lstb_Eleven.Size = new System.Drawing.Size(19, 121);
+            this.lstb_Eleven.TabIndex = 18;
+            this.lstb_Eleven.Visible = false;
+            // 
+            // lstb_Ten
+            // 
+            this.lstb_Ten.FormattingEnabled = true;
+            this.lstb_Ten.Items.AddRange(new object[] {
+            "*",
+            "-",
+            "_"});
+            this.lstb_Ten.Location = new System.Drawing.Point(771, 354);
+            this.lstb_Ten.Name = "lstb_Ten";
+            this.lstb_Ten.Size = new System.Drawing.Size(19, 121);
+            this.lstb_Ten.TabIndex = 17;
+            this.lstb_Ten.Visible = false;
+            // 
+            // lstb_Nine
+            // 
+            this.lstb_Nine.FormattingEnabled = true;
+            this.lstb_Nine.Items.AddRange(new object[] {
+            "d",
+            "e",
+            "f",
+            "9",
+            "D",
+            "E",
+            "F"});
+            this.lstb_Nine.Location = new System.Drawing.Point(746, 354);
+            this.lstb_Nine.Name = "lstb_Nine";
+            this.lstb_Nine.Size = new System.Drawing.Size(19, 121);
+            this.lstb_Nine.TabIndex = 16;
+            this.lstb_Nine.Visible = false;
+            // 
+            // lstb_Eight
+            // 
+            this.lstb_Eight.FormattingEnabled = true;
+            this.lstb_Eight.Items.AddRange(new object[] {
+            "a",
+            "b",
+            "c",
+            "8",
+            "A",
+            "B",
+            "C"});
+            this.lstb_Eight.Location = new System.Drawing.Point(721, 354);
+            this.lstb_Eight.Name = "lstb_Eight";
+            this.lstb_Eight.Size = new System.Drawing.Size(19, 121);
+            this.lstb_Eight.TabIndex = 15;
+            this.lstb_Eight.Visible = false;
+            // 
+            // lstb_Seven
+            // 
+            this.lstb_Seven.FormattingEnabled = true;
+            this.lstb_Seven.Items.AddRange(new object[] {
+            ".",
+            "~",
+            "\"",
+            "7",
+            "\'",
+            ":",
+            ";"});
+            this.lstb_Seven.Location = new System.Drawing.Point(696, 354);
+            this.lstb_Seven.Name = "lstb_Seven";
+            this.lstb_Seven.Size = new System.Drawing.Size(19, 121);
+            this.lstb_Seven.TabIndex = 14;
+            this.lstb_Seven.Visible = false;
+            // 
+            // txt_KeySequence
+            // 
+            this.txt_KeySequence.Location = new System.Drawing.Point(547, 482);
+            this.txt_KeySequence.Multiline = true;
+            this.txt_KeySequence.Name = "txt_KeySequence";
+            this.txt_KeySequence.Size = new System.Drawing.Size(267, 68);
+            this.txt_KeySequence.TabIndex = 19;
+            this.txt_KeySequence.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(836, 675);
+            this.Controls.Add(this.txt_KeySequence);
+            this.Controls.Add(this.lstb_Eleven);
+            this.Controls.Add(this.lstb_Ten);
+            this.Controls.Add(this.lstb_Nine);
+            this.Controls.Add(this.lstb_Eight);
+            this.Controls.Add(this.lstb_Seven);
+            this.Controls.Add(this.lstb_Six);
+            this.Controls.Add(this.lstb_Five);
+            this.Controls.Add(this.lstb_Four);
+            this.Controls.Add(this.lstb_Three);
+            this.Controls.Add(this.lstb_Two);
+            this.Controls.Add(this.lstb_One);
             this.Controls.Add(this.panel_buttons);
             this.Controls.Add(this.panel_wordbuilder);
             this.Controls.Add(this.txt_Notepad);
@@ -496,6 +716,18 @@
         private System.Windows.Forms.Button btn_Eight;
         private System.Windows.Forms.Button btn_Seven;
         private System.Windows.Forms.Timer Timer;
+        private System.Windows.Forms.ListBox lstb_One;
+        private System.Windows.Forms.ListBox lstb_Two;
+        private System.Windows.Forms.ListBox lstb_Three;
+        private System.Windows.Forms.ListBox lstb_Six;
+        private System.Windows.Forms.ListBox lstb_Five;
+        private System.Windows.Forms.ListBox lstb_Four;
+        private System.Windows.Forms.ListBox lstb_Eleven;
+        private System.Windows.Forms.ListBox lstb_Ten;
+        private System.Windows.Forms.ListBox lstb_Nine;
+        private System.Windows.Forms.ListBox lstb_Eight;
+        private System.Windows.Forms.ListBox lstb_Seven;
+        private System.Windows.Forms.TextBox txt_KeySequence;
     }
 }
 
