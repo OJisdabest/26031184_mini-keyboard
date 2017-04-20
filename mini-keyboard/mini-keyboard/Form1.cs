@@ -201,5 +201,46 @@ namespace mini_keyboard
                 }
             }
         }
+        private void btn_Four_Click(object sender, EventArgs e)
+        {
+            if (boolButtonPressed[4] == false)
+            {
+                Timer_Tick(sender, e);
+            }
+            Timer.Enabled = false;
+            Timer.Enabled = true;
+            Timer.Interval = intIntervalRequired;
+            boolButtonPressed[4] = true;
+
+            if (Timer.Enabled == true)
+            {
+                if (intMyListIndex < lstb_Four.Items.Count)
+                {
+                    intMyListIndex = intMyListIndex + 1;
+                    if (intMyListIndex == lstb_Four.Items.Count)
+                    {
+                        intMyListIndex = 0;
+                    }
+                    strTemp = lstb_Four.Items[intMyListIndex].ToString();
+                }
+                else
+                {
+                    intMyListIndex = -1;
+                }
+
+                if (boolFirstVisit == true)
+                {
+                    boolFirstVisit = false;
+                    txt_WordBuilder.AppendText(strTemp);
+                    txt_KeySequence.AppendText("4".ToString());
+                    strKeyStrokes = txt_KeySequence.Text.ToString();
+                }
+                else
+                {
+                    txt_WordBuilder.Text = txt_WordBuilder.Text.Remove(txt_WordBuilder.TextLength - 1, 1);
+                    txt_WordBuilder.AppendText(strTemp);
+                }
+            }
+        }
     }
 }
