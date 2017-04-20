@@ -67,6 +67,13 @@ namespace mini_keyboard
                 txt_Mode_Status.Text = "Multi-Press"; //set mode status text to "Multi-Press" if state is false
             }
         }
+        private void btn_Submit_Click(object sender, EventArgs e)
+        {
+            strKeyStrokes = txt_WordBuilder.Text;
+            txt_Notepad.AppendText(strKeyStrokes + " ");
+            strKeyStrokes = "";
+            txt_WordBuilder.Clear();
+        }
         
     }
 }
