@@ -377,6 +377,7 @@
             this.btn_Seven.TabIndex = 25;
             this.btn_Seven.Text = "7\r\n. , \"\r\n";
             this.btn_Seven.UseVisualStyleBackColor = false;
+            this.btn_Seven.Click += new System.EventHandler(this.btn_Seven_Click);
             // 
             // btn_Enter
             // 
