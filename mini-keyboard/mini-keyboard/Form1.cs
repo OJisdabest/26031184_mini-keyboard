@@ -622,7 +622,12 @@ namespace mini_keyboard
         }
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            //if notepad text isn't empty
+            if (txt_Notepad.Text != "")
+            {
+                saveToolStripMenuItem_Click(sender, e); //call save function
+            }
+            Close(); //close application
         }
         private void configureToolStripMenuItem_Click(object sender, EventArgs e)
         {
