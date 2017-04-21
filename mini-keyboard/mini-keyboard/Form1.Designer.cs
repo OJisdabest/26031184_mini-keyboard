@@ -357,6 +357,7 @@
             this.btn_Nine.TabIndex = 27;
             this.btn_Nine.Text = "9\r\nD E F";
             this.btn_Nine.UseVisualStyleBackColor = false;
+            this.btn_Nine.Click += new System.EventHandler(this.btn_Nine_Click);
             // 
             // btn_Eight
             // 
