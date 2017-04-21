@@ -563,5 +563,58 @@ namespace mini_keyboard
                 }
             }
         }
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (txt_Notepad.Text != "")
+            {
+                boolRequiresSaving = true;
+            }
+
+            if (boolRequiresSaving == true)
+            {
+                saveAsToolStripMenuItem_Click(sender, e);
+            }
+            txt_Notepad.Text = "";
+        }
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (strCurrent_File_Name == "")
+            {
+                saveAsToolStripMenuItem_Click(sender, e);
+            }
+            else
+            {
+                StreamWriter OutputStream = File.CreateText(saveFileDialog1.FileName);
+                OutputStream.Write(txt_Notepad.Text);
+                OutputStream.Close();
+            }
+        }
+        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (strCurrent_File_Name == "")
+            {
+                saveFileDialog1.InitialDirectory = Directory.GetCurrentDirectory() + "\\";
+
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    StreamWriter OutputStream = File.CreateText(saveFileDialog1.FileName);
+                    OutputStream.Write(txt_Notepad.Text);
+                    strCurrent_File_Name = saveFileDialog1.FileName;
+                    OutputStream.Close();
+                }
+            }
+        }
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void configureToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
