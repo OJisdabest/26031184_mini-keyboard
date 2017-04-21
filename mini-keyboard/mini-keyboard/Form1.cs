@@ -37,6 +37,7 @@ namespace mini_keyboard
         {
             Timer.Interval = intIntervalRequired; //initial delay between character presses
 
+            //set button states false when form loads
             for (var intWhichButton = 0; intWhichButton <= 18; intWhichButton++)
             {
                 boolButtonPressed[intWhichButton] = false;
@@ -69,176 +70,232 @@ namespace mini_keyboard
         }
         private void btn_Submit_Click(object sender, EventArgs e)
         {
-            strKeyStrokes = txt_WordBuilder.Text;
-            txt_Notepad.AppendText(strKeyStrokes + " ");
-            strKeyStrokes = "";
-            txt_WordBuilder.Clear();
+            strKeyStrokes = txt_WordBuilder.Text; //set keystrokes variable to current wordbuilder text
+            txt_Notepad.AppendText(strKeyStrokes + " "); //insert text in variable strKeyStrokes + a space into notepad textbox
+            strKeyStrokes = ""; // clear strKeyStrokes variable
+            txt_WordBuilder.Clear(); //clear wordbuilder textbox
         }
         private void btn_Enter_Click(object sender, EventArgs e)
         {
-            txt_Notepad.AppendText(Environment.NewLine);
+            txt_Notepad.AppendText(Environment.NewLine); //insert new line in notepad textbox
         }
         private void btn_One_Click(object sender, EventArgs e)
         {
+            //when current button state is false
             if (boolButtonPressed[1] == false)
             {
-                Timer_Tick(sender, e);
+                Timer_Tick(sender, e); //call timer functionality as this resets button states
             }
-            Timer.Enabled = false;
-            Timer.Enabled = true;
+
+            //reset timer + timer interval
+            Timer.Enabled = false; 
+            Timer.Enabled = true; 
             Timer.Interval = intIntervalRequired;
+
+            //set current button state true
             boolButtonPressed[1] = true;
 
+            //implement functionality when timer is running
             if (Timer.Enabled == true)
             {
-                if (intMyListIndex < lstb_One.Items.Count)
+                if (intMyListIndex < lstb_One.Items.Count) //if index is less than total items in listbox item collection 
                 {
-                    intMyListIndex = intMyListIndex + 1;
-                    if (intMyListIndex == lstb_One.Items.Count)
+                    intMyListIndex = intMyListIndex + 1; //increment index
+                    if (intMyListIndex == lstb_One.Items.Count) //if index is equal to total items in listbox item collection associated with this button
                     {
-                        intMyListIndex = 0;
+                        intMyListIndex = 0; //reset index
                     }
-                    strTemp = lstb_One.Items[intMyListIndex].ToString();
+                    strTemp = lstb_One.Items[intMyListIndex].ToString(); //set temp string to item selected in listbox item collection associated with this button
                 }
-                else
-                {
-                    intMyListIndex = -1;
-                }
+
 
                 if (boolFirstVisit == true)
                 {
-                    boolFirstVisit = false;
-                    txt_WordBuilder.AppendText(strTemp);
-                    txt_KeySequence.AppendText("1".ToString());
-                    strKeyStrokes = txt_KeySequence.Text.ToString();
+                    boolFirstVisit = false; //set firstvisit false
+                    txt_WordBuilder.AppendText(strTemp); //append strTemp variable text to wordbuilder textbox
+                    txt_KeySequence.AppendText("1".ToString()); //append button key number to key sequence textbox
+                    strKeyStrokes = txt_KeySequence.Text.ToString(); //set variable str_KeyStrokes to keysequence text contents
                 }
-                else
+                else //when first visit is false
                 {
-                    txt_WordBuilder.Text = txt_WordBuilder.Text.Remove(txt_WordBuilder.TextLength - 1, 1);
-                    txt_WordBuilder.AppendText(strTemp);
+                    txt_WordBuilder.Text = txt_WordBuilder.Text.Remove(txt_WordBuilder.TextLength - 1, 1); //remove last character of wordbuilder textbox
+                    txt_WordBuilder.AppendText(strTemp); //append strTemp variable text to wordbuilder textbox
                 }
             }
         }
         private void btn_Two_Click(object sender, EventArgs e)
         {
+            //when current button state is false
             if (boolButtonPressed[2] == false)
             {
-                Timer_Tick(sender, e);
+                Timer_Tick(sender, e); //call timer functionality as this resets button states
             }
+
+            //reset timer + timer interval
             Timer.Enabled = false;
             Timer.Enabled = true;
             Timer.Interval = intIntervalRequired;
+
+            //set current button state true
             boolButtonPressed[2] = true;
 
+            //implement functionality when timer is running
             if (Timer.Enabled == true)
             {
-                if (intMyListIndex < lstb_Two.Items.Count)
+                if (intMyListIndex < lstb_Two.Items.Count) //if index is less than total items in listbox item collection 
                 {
-                    intMyListIndex = intMyListIndex + 1;
-                    if (intMyListIndex == lstb_Two.Items.Count)
+                    intMyListIndex = intMyListIndex + 1; //increment index
+                    if (intMyListIndex == lstb_Two.Items.Count) //if index is equal to total items in listbox item collection associated with this button
                     {
-                        intMyListIndex = 0;
+                        intMyListIndex = 0; //reset index
                     }
-                    strTemp = lstb_Two.Items[intMyListIndex].ToString();
+                    strTemp = lstb_One.Items[intMyListIndex].ToString(); //set temp string to item selected in listbox item collection associated with this button
                 }
-                else
-                {
-                    intMyListIndex = -1;
-                }
+
 
                 if (boolFirstVisit == true)
                 {
-                    boolFirstVisit = false;
-                    txt_WordBuilder.AppendText(strTemp);
-                    txt_KeySequence.AppendText("2".ToString());
-                    strKeyStrokes = txt_KeySequence.Text.ToString();
+                    boolFirstVisit = false; //set firstvisit false
+                    txt_WordBuilder.AppendText(strTemp); //append strTemp variable text to wordbuilder textbox
+                    txt_KeySequence.AppendText("2".ToString()); //append button key number to key sequence textbox
+                    strKeyStrokes = txt_KeySequence.Text.ToString(); //set variable str_KeyStrokes to keysequence text contents
                 }
-                else
+                else //when first visit is false
                 {
-                    txt_WordBuilder.Text = txt_WordBuilder.Text.Remove(txt_WordBuilder.TextLength - 1, 1);
-                    txt_WordBuilder.AppendText(strTemp);
+                    txt_WordBuilder.Text = txt_WordBuilder.Text.Remove(txt_WordBuilder.TextLength - 1, 1); //remove last character of wordbuilder textbox
+                    txt_WordBuilder.AppendText(strTemp); //append strTemp variable text to wordbuilder textbox
                 }
             }
         }
         private void btn_Three_Click(object sender, EventArgs e)
         {
+            //when current button state is false
             if (boolButtonPressed[3] == false)
             {
-                Timer_Tick(sender, e);
+                Timer_Tick(sender, e); //call timer functionality as this resets button states
             }
+
+            //reset timer + timer interval
             Timer.Enabled = false;
             Timer.Enabled = true;
             Timer.Interval = intIntervalRequired;
+
+            //set current button state true
             boolButtonPressed[3] = true;
 
+            //implement functionality when timer is running
             if (Timer.Enabled == true)
             {
-                if (intMyListIndex < lstb_Three.Items.Count)
+                if (intMyListIndex < lstb_Three.Items.Count) //if index is less than total items in listbox item collection 
                 {
-                    intMyListIndex = intMyListIndex + 1;
-                    if (intMyListIndex == lstb_Three.Items.Count)
+                    intMyListIndex = intMyListIndex + 1; //increment index
+                    if (intMyListIndex == lstb_Three.Items.Count) //if index is equal to total items in listbox item collection associated with this button
                     {
-                        intMyListIndex = 0;
+                        intMyListIndex = 0; //reset index
                     }
-                    strTemp = lstb_Three.Items[intMyListIndex].ToString();
+                    strTemp = lstb_Three.Items[intMyListIndex].ToString(); //set temp string to item selected in listbox item collection associated with this button
                 }
-                else
-                {
-                    intMyListIndex = -1;
-                }
+
 
                 if (boolFirstVisit == true)
                 {
-                    boolFirstVisit = false;
-                    txt_WordBuilder.AppendText(strTemp);
-                    txt_KeySequence.AppendText("3".ToString());
-                    strKeyStrokes = txt_KeySequence.Text.ToString();
+                    boolFirstVisit = false; //set firstvisit false
+                    txt_WordBuilder.AppendText(strTemp); //append strTemp variable text to wordbuilder textbox
+                    txt_KeySequence.AppendText("3".ToString()); //append button key number to key sequence textbox
+                    strKeyStrokes = txt_KeySequence.Text.ToString(); //set variable str_KeyStrokes to keysequence text contents
                 }
-                else
+                else //when first visit is false
                 {
-                    txt_WordBuilder.Text = txt_WordBuilder.Text.Remove(txt_WordBuilder.TextLength - 1, 1);
-                    txt_WordBuilder.AppendText(strTemp);
+                    txt_WordBuilder.Text = txt_WordBuilder.Text.Remove(txt_WordBuilder.TextLength - 1, 1); //remove last character of wordbuilder textbox
+                    txt_WordBuilder.AppendText(strTemp); //append strTemp variable text to wordbuilder textbox
                 }
             }
         }
         private void btn_Four_Click(object sender, EventArgs e)
         {
+            //when current button state is false
             if (boolButtonPressed[4] == false)
             {
-                Timer_Tick(sender, e);
+                Timer_Tick(sender, e); //call timer functionality as this resets button states
             }
+
+            //reset timer + timer interval
             Timer.Enabled = false;
             Timer.Enabled = true;
             Timer.Interval = intIntervalRequired;
+
+            //set current button state true
             boolButtonPressed[4] = true;
 
+            //implement functionality when timer is running
             if (Timer.Enabled == true)
             {
-                if (intMyListIndex < lstb_Four.Items.Count)
+                if (intMyListIndex < lstb_Four.Items.Count) //if index is less than total items in listbox item collection 
                 {
-                    intMyListIndex = intMyListIndex + 1;
-                    if (intMyListIndex == lstb_Four.Items.Count)
+                    intMyListIndex = intMyListIndex + 1; //increment index
+                    if (intMyListIndex == lstb_Four.Items.Count) //if index is equal to total items in listbox item collection associated with this button
                     {
-                        intMyListIndex = 0;
+                        intMyListIndex = 0; //reset index
                     }
-                    strTemp = lstb_Four.Items[intMyListIndex].ToString();
+                    strTemp = lstb_Four.Items[intMyListIndex].ToString(); //set temp string to item selected in listbox item collection associated with this button
                 }
-                else
-                {
-                    intMyListIndex = -1;
-                }
+
 
                 if (boolFirstVisit == true)
                 {
-                    boolFirstVisit = false;
-                    txt_WordBuilder.AppendText(strTemp);
-                    txt_KeySequence.AppendText("4".ToString());
-                    strKeyStrokes = txt_KeySequence.Text.ToString();
+                    boolFirstVisit = false; //set firstvisit false
+                    txt_WordBuilder.AppendText(strTemp); //append strTemp variable text to wordbuilder textbox
+                    txt_KeySequence.AppendText("4".ToString()); //append button key number to key sequence textbox
+                    strKeyStrokes = txt_KeySequence.Text.ToString(); //set variable str_KeyStrokes to keysequence text contents
                 }
-                else
+                else //when first visit is false
                 {
-                    txt_WordBuilder.Text = txt_WordBuilder.Text.Remove(txt_WordBuilder.TextLength - 1, 1);
-                    txt_WordBuilder.AppendText(strTemp);
+                    txt_WordBuilder.Text = txt_WordBuilder.Text.Remove(txt_WordBuilder.TextLength - 1, 1); //remove last character of wordbuilder textbox
+                    txt_WordBuilder.AppendText(strTemp); //append strTemp variable text to wordbuilder textbox
+                }
+            }
+        }
+        private void btn_Five_Click(object sender, EventArgs e)
+        {
+            //when current button state is false
+            if (boolButtonPressed[5] == false)
+            {
+                Timer_Tick(sender, e); //call timer functionality as this resets button states
+            }
+
+            //reset timer + timer interval
+            Timer.Enabled = false;
+            Timer.Enabled = true;
+            Timer.Interval = intIntervalRequired;
+
+            //set current button state true
+            boolButtonPressed[5] = true;
+
+            //implement functionality when timer is running
+            if (Timer.Enabled == true)
+            {
+                if (intMyListIndex < lstb_Five.Items.Count) //if index is less than total items in listbox item collection 
+                {
+                    intMyListIndex = intMyListIndex + 1; //increment index
+                    if (intMyListIndex == lstb_Five.Items.Count) //if index is equal to total items in listbox item collection associated with this button
+                    {
+                        intMyListIndex = 0; //reset index
+                    }
+                    strTemp = lstb_Five.Items[intMyListIndex].ToString(); //set temp string to item selected in listbox item collection associated with this button
+                }
+
+
+                if (boolFirstVisit == true)
+                {
+                    boolFirstVisit = false; //set firstvisit false
+                    txt_WordBuilder.AppendText(strTemp); //append strTemp variable text to wordbuilder textbox
+                    txt_KeySequence.AppendText("5".ToString()); //append button key number to key sequence textbox
+                    strKeyStrokes = txt_KeySequence.Text.ToString(); //set variable str_KeyStrokes to keysequence text contents
+                }
+                else //when first visit is false
+                {
+                    txt_WordBuilder.Text = txt_WordBuilder.Text.Remove(txt_WordBuilder.TextLength - 1, 1); //remove last character of wordbuilder textbox
+                    txt_WordBuilder.AppendText(strTemp); //append strTemp variable text to wordbuilder textbox
                 }
             }
         }

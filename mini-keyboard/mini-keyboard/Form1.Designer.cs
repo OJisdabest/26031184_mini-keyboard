@@ -334,6 +334,7 @@
             this.btn_Five.TabIndex = 29;
             this.btn_Five.Text = "5\r\nJ K L";
             this.btn_Five.UseVisualStyleBackColor = false;
+            this.btn_Five.Click += new System.EventHandler(this.btn_Five_Click);
             // 
             // btn_Four
             // 
