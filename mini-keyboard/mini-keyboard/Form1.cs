@@ -565,46 +565,58 @@ namespace mini_keyboard
         }
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //if notepad text is not empty
             if (txt_Notepad.Text != "")
             {
-                boolRequiresSaving = true;
+                boolRequiresSaving = true; //set requires saving variable to true
             }
 
+            //if requires saving variable is true
             if (boolRequiresSaving == true)
             {
-                saveAsToolStripMenuItem_Click(sender, e);
+                saveAsToolStripMenuItem_Click(sender, e); //call save function
             }
-            txt_Notepad.Text = "";
+            txt_Notepad.Text = ""; //clear notepad text after save
         }
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            openFileDialog1.InitialDirectory = Directory.GetCurrentDirectory() + "\\"; //fetch current directory
 
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                StreamReader InputStream = File.OpenText(openFileDialog1.FileName); //open existing file
+                txt_Notepad.Text = InputStream.ReadToEnd(); //insert text into notepad
+                strCurrent_File_Name = openFileDialog1.FileName; //set current filename to file that was opened
+                InputStream.Close(); //close input stream
+            }
         }
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //if current file name is empty - open save dialog
             if (strCurrent_File_Name == "")
             {
-                saveAsToolStripMenuItem_Click(sender, e);
+                saveAsToolStripMenuItem_Click(sender, e); //call save function
             }
             else
             {
-                StreamWriter OutputStream = File.CreateText(saveFileDialog1.FileName);
-                OutputStream.Write(txt_Notepad.Text);
-                OutputStream.Close();
+                StreamWriter OutputStream = File.CreateText(saveFileDialog1.FileName); //save over current file
+                OutputStream.Write(txt_Notepad.Text); //save text from notepad to current file
+                OutputStream.Close(); //close output stream
             }
         }
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //if current file name is empty
             if (strCurrent_File_Name == "")
             {
-                saveFileDialog1.InitialDirectory = Directory.GetCurrentDirectory() + "\\";
+                saveFileDialog1.InitialDirectory = Directory.GetCurrentDirectory() + "\\"; //get current directory
 
                 if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    StreamWriter OutputStream = File.CreateText(saveFileDialog1.FileName);
-                    OutputStream.Write(txt_Notepad.Text);
-                    strCurrent_File_Name = saveFileDialog1.FileName;
-                    OutputStream.Close();
+                    StreamWriter OutputStream = File.CreateText(saveFileDialog1.FileName); //save over current file
+                    OutputStream.Write(txt_Notepad.Text); //save text from notepad to current file
+                    strCurrent_File_Name = saveFileDialog1.FileName; //set file name to name of file saved
+                    OutputStream.Close(); //close output stream
                 }
             }
         }
