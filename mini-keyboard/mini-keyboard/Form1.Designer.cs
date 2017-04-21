@@ -280,6 +280,7 @@
             this.btn_Ten.TabIndex = 34;
             this.btn_Ten.Text = "* - _";
             this.btn_Ten.UseVisualStyleBackColor = false;
+            this.btn_Ten.Click += new System.EventHandler(this.btn_Ten_Click);
             // 
             // btn_Three
             // 
