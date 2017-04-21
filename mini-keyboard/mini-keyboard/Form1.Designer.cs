@@ -259,6 +259,7 @@
             this.btn_Eleven.TabIndex = 36;
             this.btn_Eleven.Text = "#\r\n000";
             this.btn_Eleven.UseVisualStyleBackColor = false;
+            this.btn_Eleven.Click += new System.EventHandler(this.btn_Eleven_Click);
             // 
             // btn_Submit
             // 
