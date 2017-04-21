@@ -631,7 +631,7 @@ namespace mini_keyboard
         }
         private void configureToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            intIntervalRequired = Convert.ToInt32(My_Dialogs.InputBox("Please enter the 'Delay Value' you require between character presses. 1000 is equivalent to 1 second." + Environment.NewLine +  "The current delay is: " + intIntervalRequired + "."));
         }
     }
 }
