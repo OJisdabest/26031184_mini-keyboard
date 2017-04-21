@@ -324,6 +324,7 @@
             this.btn_Six.TabIndex = 30;
             this.btn_Six.Text = "6\r\nM N O";
             this.btn_Six.UseVisualStyleBackColor = false;
+            this.btn_Six.Click += new System.EventHandler(this.btn_Six_Click);
             // 
             // btn_Five
             // 

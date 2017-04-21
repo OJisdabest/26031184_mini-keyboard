@@ -299,5 +299,49 @@ namespace mini_keyboard
                 }
             }
         }
+        private void btn_Six_Click(object sender, EventArgs e)
+        {
+            //when current button state is false
+            if (boolButtonPressed[6] == false)
+            {
+                Timer_Tick(sender, e); //call timer functionality as this resets button states
+            }
+
+            //reset timer + timer interval
+            Timer.Enabled = false;
+            Timer.Enabled = true;
+            Timer.Interval = intIntervalRequired;
+
+            //set current button state true
+            boolButtonPressed[6] = true;
+
+            //implement functionality when timer is running
+            if (Timer.Enabled == true)
+            {
+                if (intMyListIndex < lstb_Six.Items.Count) //if index is less than total items in listbox item collection 
+                {
+                    intMyListIndex = intMyListIndex + 1; //increment index
+                    if (intMyListIndex == lstb_Six.Items.Count) //if index is equal to total items in listbox item collection associated with this button
+                    {
+                        intMyListIndex = 0; //reset index
+                    }
+                    strTemp = lstb_Six.Items[intMyListIndex].ToString(); //set temp string to item selected in listbox item collection associated with this button
+                }
+
+
+                if (boolFirstVisit == true)
+                {
+                    boolFirstVisit = false; //set firstvisit false
+                    txt_WordBuilder.AppendText(strTemp); //append strTemp variable text to wordbuilder textbox
+                    txt_KeySequence.AppendText("6".ToString()); //append button key number to key sequence textbox
+                    strKeyStrokes = txt_KeySequence.Text.ToString(); //set variable str_KeyStrokes to keysequence text contents
+                }
+                else //when first visit is false
+                {
+                    txt_WordBuilder.Text = txt_WordBuilder.Text.Remove(txt_WordBuilder.TextLength - 1, 1); //remove last character of wordbuilder textbox
+                    txt_WordBuilder.AppendText(strTemp); //append strTemp variable text to wordbuilder textbox
+                }
+            }
+        }
     }
 }
