@@ -25,9 +25,6 @@ namespace mini_keyboard
 
         int intIntervalRequired = 500; //timing functionality
         int intMyListIndex = -1; //sequence functionality
-        int intPredictedIndex; //prediction variable
-        int intNumberOfCharacters; //prediction variable
-        int intPredictedWordLength; //prediction variable
 
         public Form1()
         {
@@ -70,10 +67,25 @@ namespace mini_keyboard
         }
         private void btn_Submit_Click(object sender, EventArgs e)
         {
-            strKeyStrokes = txt_WordBuilder.Text; //set keystrokes variable to current wordbuilder text
-            txt_Notepad.AppendText(strKeyStrokes + " "); //insert text in variable strKeyStrokes + a space into notepad textbox
-            strKeyStrokes = ""; // clear strKeyStrokes variable
-            txt_WordBuilder.Clear(); //clear wordbuilder textbox
+            if (state == false)
+            {
+                strKeyStrokes = txt_WordBuilder.Text; //set keystrokes variable to current wordbuilder text
+                txt_Notepad.AppendText(strKeyStrokes + " "); //insert text in variable strKeyStrokes + a space into notepad textbox
+                txt_WordBuilder.Clear(); //clear wordbuilder textbox
+                StreamWriter OutputStream = File.AppendText("Dictionary.txt"); //append text to dictionary file
+                OutputStream.Write(txt_KeySequence.Text + "&" + strKeyStrokes + "&" + "0" + Environment.NewLine); //save text from notepad to current file
+                OutputStream.Close(); //close output stream
+                txt_KeySequence.Clear(); //clear key sequence text box
+                strKeyStrokes = ""; // clear strKeyStrokes variable
+            }
+            else
+            {
+                strKeyStrokes = txt_WordBuilder.Text; //set keystrokes variable to current wordbuilder text
+                txt_Notepad.AppendText(strKeyStrokes + " "); //insert text in variable strKeyStrokes + a space into notepad textbox
+                txt_KeySequence.Clear(); //clear key sequence text box
+                strKeyStrokes = ""; // clear strKeyStrokes variable
+                txt_WordBuilder.Clear(); //clear wordbuilder textbox
+            }
         }
         private void btn_Enter_Click(object sender, EventArgs e)
         {
@@ -568,7 +580,11 @@ namespace mini_keyboard
             //if notepad text is not empty
             if (txt_Notepad.Text != "")
             {
-                boolRequiresSaving = true; //set requires saving variable to true
+                boolRequiresSaving = true; //set requires saving variable to true, needs saving
+            }
+            else
+            {
+                boolRequiresSaving = false; //set requires saving variable to false, doesn't need saving
             }
 
             //if requires saving variable is true
@@ -632,6 +648,17 @@ namespace mini_keyboard
         private void configureToolStripMenuItem_Click(object sender, EventArgs e)
         {
             intIntervalRequired = Convert.ToInt32(My_Dialogs.InputBox("Please enter the 'Delay Value' you require between character presses. 1000 is equivalent to 1 second." + Environment.NewLine +  "The current delay is: " + intIntervalRequired + "."));
+        }
+        private void btn_Previous_Click(object sender, EventArgs e)
+        {
+            if (state == false)
+            {
+                if (txt_WordBuilder.TextLength >= 1)
+                {
+                    txt_WordBuilder.Text = txt_WordBuilder.Text.Remove(txt_WordBuilder.TextLength - 1, 1); //remove last character of wordbuilder textbox
+                    txt_KeySequence.Text = txt_KeySequence.Text.Remove(txt_KeySequence.TextLength - 1, 1); //remove last character of keysequence textbox as character has been removed
+                }
+            }
         }
     }
 }
